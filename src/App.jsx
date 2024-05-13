@@ -32,7 +32,7 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path='/' element={<Home />}/>
+          <Route path="http://AlexWallter.github.io/multipage-react-spaceTravel-project" element={<Home />}/>
           
           <Route path='/Destination/moon' element={<Destination  data={Data.destinations}/>}/>
           <Route path='/Destination/mars' element={<DestinationMars  data={Data.destinations}/>}/>
