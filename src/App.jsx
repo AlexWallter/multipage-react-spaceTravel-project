@@ -21,7 +21,6 @@ import TechnologySpaceCapsule from './pages/technology/TechnologySpaceCapsule.js
 import Nav from './componentes/Navigation'
 
 
-
 import './App.css'
 import Data from './data.json'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
