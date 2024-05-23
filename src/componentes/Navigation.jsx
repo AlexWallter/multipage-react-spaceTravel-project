@@ -35,10 +35,10 @@ export default function Nav() {
             <button className= {toggle ? "close-btn" : "burger-btn"} onClick={()=> toggleBtn()}></button>
             <nav className='home-nav'>
                 <ul className="flex uppercase  primary-navbar underline" id = {toggle ? 'open-menu':null}>
-                    <li onClick={()=>newClass('home', 'home-btn')}><NavLink to='/' className="letter-spacing-2 home-btn"><span>00</span>Home</NavLink></li>
-                    <li onClick={()=>newClass('destination', 'destination-btn')}><NavLink to='/Destination/moon' className="letter-spacing-2 destination-btn"><span>01</span>destination</NavLink></li>
-                    <li onClick={()=>newClass('crew', 'crew-btn')}><NavLink to='/Crew/douglas-hurley' className="letter-spacing-2 crew-btn"><span>02</span>crew</NavLink></li>
-                    <li onClick={()=>newClass('technology', 'technology-btn')}><NavLink to='/Technology/launch-vehicle' className="letter-spacing-2 technology-btn"><span>03</span>technology</NavLink></li>
+                    <li onClick={()=>newClass('home', 'home-btn')}><NavLink to="https://AlexWallter.github.io/multipage-react-spaceTravel-project" className="letter-spacing-2 home-btn"><span>00</span>Home</NavLink></li>
+                    <li onClick={()=>newClass('destination', 'destination-btn')}><NavLink to='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Destination/moon' className="letter-spacing-2 destination-btn"><span>01</span>destination</NavLink></li>
+                    <li onClick={()=>newClass('crew', 'crew-btn')}><NavLink to='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Crew/douglas-hurley' className="letter-spacing-2 crew-btn"><span>02</span>crew</NavLink></li>
+                    <li onClick={()=>newClass('technology', 'technology-btn')}><NavLink to='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Technology/launch-vehicle' className="letter-spacing-2 technology-btn"><span>03</span>technology</NavLink></li>
                 </ul>
             </nav>
         </header>
