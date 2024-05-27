@@ -1,5 +1,5 @@
 //=================================PAGES====================================//
-import Home from './Home'
+import Home from './Home.jsx'
 //=========Destinations==========//
 import Destination from './pages/Destination/Destination.jsx'
 import DestinationMars from './pages/Destination/DestinationMars.jsx'
@@ -23,31 +23,31 @@ import Nav from './componentes/Navigation'
 
 import './App.css'
 import Data from './data.json'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter ,Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+        <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path="https://AlexWallter.github.io/multipage-react-spaceTravel-project" element={<Home />}/>
+          <Route path="https://alexwallter.github.io/multipage-react-spaceTravel-project" element={<Home />}/>
           
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Destination/moon' element={<Destination  data={Data.destinations}/>}/>
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Destination/mars' element={<DestinationMars  data={Data.destinations}/>}/>
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Destination/titan' element={<DestinationTitan  data={Data.destinations}/>}/>
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Destination/europe' element={<DestinationEurope  data={Data.destinations}/>}/>
+          <Route path='/Destination/moon' element={<Destination  data={Data.destinations}/>}/>
+          <Route path='/Destination/mars' element={<DestinationMars  data={Data.destinations}/>}/>
+          <Route path='/Destination/titan' element={<DestinationTitan  data={Data.destinations}/>}/>
+          <Route path='/Destination/europe' element={<DestinationEurope  data={Data.destinations}/>}/>
 
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Crew/douglas-hurley' element={<Crew data={Data.crew}/>} />
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Crew/mark-shuttleworth' element={<CrewMark data={Data.crew}/>}/>
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Crew/victor-glover' element={<CrewVictor data={Data.crew}/>}/>
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Crew/anousheh-ansari' element={<CrewAnousheh data={Data.crew}/>}/>
+          <Route path='/Crew/douglas-hurley' element={<Crew data={Data.crew}/>} />
+          <Route path='/Crew/mark-shuttleworth' element={<CrewMark data={Data.crew}/>}/>
+          <Route path='/Crew/victor-glover' element={<CrewVictor data={Data.crew}/>}/>
+          <Route path='/Crew/anousheh-ansari' element={<CrewAnousheh data={Data.crew}/>}/>
               
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Technology/launch-vehicle' element={<Technology data={Data.technology}/>}/>
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Technology/spaceport' element={<TechnologySpaceport data={Data.technology}/>}></Route> 
-          <Route path='https://AlexWallter.github.io/multipage-react-spaceTravel-project/Technology/spaceCapsule' element={<TechnologySpaceCapsule data={Data.technology}/>}></Route>         
+          <Route path='/Technology/launch-vehicle' element={<Technology data={Data.technology}/>}/>
+          <Route path='/Technology/spaceport' element={<TechnologySpaceport data={Data.technology}/>}></Route> 
+          <Route path='/Technology/spaceCapsule' element={<TechnologySpaceCapsule data={Data.technology}/>}></Route>         
         </Routes>
-      </BrowserRouter>
+        </BrowserRouter>
     </>
   )
 }
