@@ -1,7 +1,17 @@
 import TechnologyNavBar from '/src/componentes/TechnologyNavBar.jsx'
+import { useEffect } from 'react'
+import { useNavIndex } from '../../hooks/useNavIndex'
 
 export default function technology({data}) {
-    console.log(data[0].images)
+    
+    const indexValue = useNavIndex((state)=> state.indexValue)
+    const indexRestart = useNavIndex((state)=> state.NavIndex)
+    useEffect(()=>{
+        indexRestart(0)
+        console.log()
+    }, [])
+    
+    if(indexValue<3) {
     return (
         <>
         <div className="technology-container grid conatiner flow">
@@ -11,14 +21,16 @@ export default function technology({data}) {
             </nav>
             <article className="technology-info">
                 <header className="ff-sans-cond fs-300 uppercase letter-spacing-2 light-font">the technology...</header>
-                <h2 className="ff-serif fs-700 uppercase letter-spacing-2">{data[0].name}</h2>
-                <p className="fs-400 light-font">{data[0].description}</p>
+                <h2 className="ff-serif fs-700 uppercase letter-spacing-2">{data[indexValue].name}</h2>
+                <p className="fs-400 light-font">{data[indexValue].description}</p>
             </article>
             <picture className= "technology-image">
-                <source media={"(min-width: 895px)"} srcSet= {data[0].images.portrait} />
-                <img src= {data[0].images.landscape} />
+                <source media={"(min-width: 895px)"} srcSet= {data[indexValue].images.portrait} />
+                <img src= {data[indexValue].images.landscape} />
             </picture>
         </div>
         </>
-    )
+
+)
+    } 
 }
